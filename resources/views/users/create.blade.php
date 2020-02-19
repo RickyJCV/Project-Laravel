@@ -41,6 +41,17 @@
                     placeholder="Debe tener más de 6 caracteres">
             </div>
 
+            <!--Profesión-->
+
+            <div class="form-group">
+                <label for="profession_id">Profesión:</label>
+                <select name="profession_id" id="profession_id" class="form-control">
+                @foreach ($profession_id as $profession_id)
+                    <option value="{{ $profession_id['id'] }}">{{ $profession_id['title'] }}</option>
+                @endforeach
+                </select>
+            </div>
+
             <button type="submit" class="btn btn-success">Crear usuario</button>
             <a href="{{ route('users.index') }}" class="btn btn-link">Regresar a la lista de usuarios</a>
         </form>

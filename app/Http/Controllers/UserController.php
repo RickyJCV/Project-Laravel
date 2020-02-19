@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Profession;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
@@ -30,7 +31,8 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('users.create');
+        $profession_id = Profession::all();
+        return view('users.create', compact('profession_id'));
     }
 
     public function store()
@@ -39,6 +41,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => ['required', 'email', 'unique:users,email'],
             'password' => 'required',
+            'profession_id' => 'required',
         ], [
             'name.required' => 'El campo nombre es obligatorio'
         ]);
@@ -46,7 +49,8 @@ class UserController extends Controller
         User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password'])
+            'password' => bcrypt($data['password']),
+            'profession_id' => $data['profession_id'],
         ]);
 
         return redirect()->route('users.index');
