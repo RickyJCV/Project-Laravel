@@ -25,24 +25,24 @@
 
             <div class="form-group">
                 <label for="name">Nombre:</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Pedro Perez"
+                <input type="text" class="form-control" name="name" id="name" placeholder="Ricardo Cabrera"
                     value="{{ old('name') }}">
             </div>
 
             <div class="form-group">
                 <label for="email">Correo electrónico:</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="pedro@example.com"
+                <input type="email" class="form-control" name="email" id="email" placeholder="a.ricardocabrera@adaits.es"
                     value="{{ old('email') }}">
             </div>
 
             <div class="form-group">
                 <label for="password">Contraseña:</label>
                 <input type="password" class="form-control" name="password" id="password"
-                    placeholder="Mayor a 6 caracteres">
+                    placeholder="Debe tener más de 6 caracteres">
             </div>
 
             <button type="submit" class="btn btn-success">Crear usuario</button>
-            <a href="{{ route('users.index') }}" class="btn btn-link">Regresar al listado de usuarios</a>
+            <a href="{{ route('users.index') }}" class="btn btn-link">Regresar a la lista de usuarios</a>
         </form>
     </div>
 </div>

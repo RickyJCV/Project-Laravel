@@ -14,7 +14,7 @@ class UserController extends Controller
         //$users = DB::table('users')->get();
         $users = User::all();
 
-        $title = 'Listado de usuarios';
+        $title = 'Lista de usuarios';
 
 //        return view('users.index')
 //            ->with('users', User::all())

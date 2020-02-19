@@ -7,9 +7,9 @@
 
 <p>Nombre del usuario: {{ $user->name }}</p>
 <p>Correo electrónico: {{ $user->email }}</p>
-<p>Profesion: {{ $user->profession->title }}</p>
+<p>Profesión: {{ $user->profession->title }}</p>
 
 <p>
-    <a href="{{ route('users.index') }}">Regresar al listado de usuarios</a>
+    <a href="{{ route('users.index') }}">Regresar a la lista de usuarios</a>
 </p>
 @endsection

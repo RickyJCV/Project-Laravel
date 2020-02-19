@@ -29,10 +29,10 @@
         <label for="password">Contraseña:</label>
         <input type="password" name="password" id="password" placeholder="Mayor a 6 caracteres">
         <br>
-        <button type="submit">Actualizar usuario</button>
+        <button type="submit" class="btn btn-success">Actualizar usuario</button>
     </form>
 
     <p>
-        <a href="{{ route('users.index') }}">Regresar al listado de usuarios</a>
+        <a href="{{ route('users.index') }}">Regresar a la lista de usuarios</a>
     </p>
 @endsection
