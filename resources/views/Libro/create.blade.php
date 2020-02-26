@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="npagina" id="npagina" class="form-control input-sm"
+                                        <input type="number" name="npagina" id="npagina" class="form-control input-sm"
                                             placeholder="Número de Páginas">
                                     </div>
                                 </div>
@@ -48,13 +48,13 @@
                             <div class="row">
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="edicion" id="edicion" class="form-control input-sm"
+                                        <input type="number" name="edicion" id="edicion" class="form-control input-sm"
                                             placeholder="Edición del libro">
                                     </div>
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="precio" id="precio" class="form-control input-sm"
+                                        <input type="number" name="precio" id="precio" class="form-control input-sm"
                                             placeholder="Precio del libro">
                                     </div>
                                 </div>

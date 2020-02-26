@@ -31,3 +31,8 @@ Route::resource('libro', 'LibroController');
 
 Route::get('/libro', 'LibroController@index')
     ->name('libro.index');
+
+Route::resource('pedido', 'PedidosController');
+
+Route::get('/pedido', 'PedidosController@index')
+    ->name('pedido.index');

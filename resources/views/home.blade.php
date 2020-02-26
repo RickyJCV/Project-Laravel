@@ -22,6 +22,10 @@
                     <div class="m-5">
                         <a class="btn btn-info" href="{{route('libro.index')}}">Ir a la lista de Libros</a>
                     </div>
+                    <br>
+                    <div class="m-5">
+                        <a class="btn btn-info" href="{{route('pedido.index')}}">Ir a la lista de Pedidos</a>
+                    </div>
 
                 </div>
             </div>
