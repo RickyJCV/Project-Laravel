@@ -7,14 +7,18 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Menú</div>
 
-                <div class="panel-body">
+                <div class="panel-body text-center">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    ¡ Estás logeado !
+                    <h4 class="m-5">¡ Estás logeado !</h4>
+                    <br>
+                    <div class="m-5">
+                    <a class="btn btn-info" href="{{route('users.index')}}">Ir a la lista de usuarios</a>
+                    </div>
+                    
                 </div>
             </div>
         </div>

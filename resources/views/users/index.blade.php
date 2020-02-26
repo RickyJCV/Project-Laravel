@@ -7,7 +7,9 @@
     <h1 class="pb-1">{{ $title }}</h1>
     <p>
         <br><br>
+        @if (\Auth::user()->role_id === 1)
         <a href="{{ route('users.create') }}" class="btn btn-success">Nuevo usuario</a>
+        @endif
     </p>
 </div>
 
@@ -33,9 +35,12 @@
                     {{ method_field('DELETE') }}
                     <a href="{{ route('users.show', $user) }}" class="btn btn-link"><span
                             class="oi oi-eye text-dark"></span></a>
+                    @if (\Auth::user()->role_id === 1)
                     <a href="{{ route('users.edit', $user) }}" class="btn btn-link"><span
                             class="oi oi-pencil text-warning"></span></a>
+
                     <button type="submit" class="btn btn-link"><span class="oi oi-trash text-danger"></span></button>
+                    @endif
                 </form>
             </td>
         </tr>

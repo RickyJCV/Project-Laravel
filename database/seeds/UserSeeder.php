@@ -22,6 +22,16 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@admin.admin',
             'password' => bcrypt('admin'),
+            'role_id' => 1,
+            'profession_id' => $professionId,
+            'is_admin' => true,
+        ]);
+
+        factory(User::class)->create([
+            'name' => 'estudiante',
+            'email' => 'estudiante@estudiante.estudiante',
+            'password' => bcrypt('estudiante'),
+            'role_id' => 2,
             'profession_id' => $professionId,
             'is_admin' => true,
         ]);
@@ -34,6 +44,6 @@ class UserSeeder extends Seeder
             'profession_id' => $professionId
         ]);*/
 
-        factory(User::class, 48)->create();
+        //factory(User::class, 48)->create();
     }
 }

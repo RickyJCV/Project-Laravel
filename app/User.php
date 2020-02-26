@@ -47,4 +47,15 @@ class User extends Authenticatable
     {
         return $this->is_admin;
     }
+
+    public function role(){
+        return $this->belongsTo('App\Role');
+    }
+
+    public function esAdmin(){
+        if($this->role->nombre_rol=='administrador'){
+            return true;
+        }
+        return false;
+    }
 }

@@ -28,6 +28,16 @@ class HomeController extends Controller
         //$user=Auth::user();
         //return view('home', compact('user'));
         //return view('users.index');
-        return redirect()->route('users.index');
+        
+        $user=Auth::user();
+
+        if($user->esAdmin()){
+            //return redirect()->route('users.index');
+            return view('home');
+        }else{
+            //return redirect()->route('users.index');
+            return view('home');
+        }
+        
     }
 }
