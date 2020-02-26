@@ -26,3 +26,8 @@ Route::delete('/usuarios/{user}', 'UserController@destroy')->name('users.destroy
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('libro', 'LibroController');
+
+Route::get('/libro', 'LibroController@index')
+    ->name('libro.index');
